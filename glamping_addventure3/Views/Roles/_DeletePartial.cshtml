@@ -1,0 +1,11 @@
+﻿<form asp-action="DeleteConfirmed" method="post" onsubmit="submitDeleteForm(this)">
+    <input type="hidden" name="id" value="@Model.Idrol" />
+    <div class="text-center">
+        <p>¿Está seguro de que desea eliminar el rol <strong>@Model.Nombre</strong>?</p>
+        <p class="text-danger">Esta acción no se puede deshacer.</p>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+        <button type="button" class="btn btn-secondary btn-sm ms-2" data-bs-dismiss="modal">Cancelar</button>
+    </div>
+</form>
